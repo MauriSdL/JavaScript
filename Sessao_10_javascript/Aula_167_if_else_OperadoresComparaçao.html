@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var media = 7
+        var nota1 = parseFloat(prompt('Nota 1: '))
+        var nota2 = parseFloat(prompt('Nota 2: '))
+        var nota3 = parseFloat(prompt('Nota 3: '))
+        var nota4 = parseFloat(prompt('Nota 4: '))
+        console.log(nota1)
+        console.log(nota2)
+        console.log(nota3)
+        console.log(nota4)
+        
+        var calcMedia = (nota1 + nota2 + nota3 + nota4)/4 
+        console.log(calcMedia)
+        console.log(typeof (calcMedia))
+
+
+        if (calcMedia >= 7) {
+            document.write('Aprovado com a média ', calcMedia)
+        } else {
+            document.write('Reprovado com a média ', calcMedia)
+        }
+    </script>
+
+</body>
+</html>

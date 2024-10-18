@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let nota = prompt('Digite a nota do aluno:')
+        let faltas = prompt('Digite a quantidade de faltas:')
+        
+        let media = 7
+        let faltas_maximas = 15
+        
+        /* Sem usar operador ternario
+       if (nota >= media && faltas <= faltas_maximas){
+        document.write('Aprovado')
+       } else {
+        document.write('Reprovado')
+       }
+        */
+
+    //   Usando com Operador Ternario
+    //   variavel = (condiçao) ? <verdadeiro> : <falso>
+        let resultado = (nota >= media && faltas <= faltas_maximas) ? 'Aprovado' : 'Reprovado'
+        document.write(resultado)
+        
+    </script>
+
+</body>
+</html>
