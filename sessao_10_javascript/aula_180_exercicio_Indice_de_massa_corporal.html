@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Indice de massa Corporal</h1>
+
+    <script>
+        
+        let nome = prompt('Digite o seu nome:')
+        let altura = prompt('Digite sua Altura em cm:')
+        let peso = prompt('Digite seu peso:')
+
+        let converterAlturaEmMetro = altura / 100
+        let converterPesoEmKilo = peso / 1
+        let imc = converterPesoEmKilo / (converterAlturaEmMetro * converterAlturaEmMetro)
+
+        if (imc < 16) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Baixo do peso muito grave`)
+
+        } else if (imc >= 16 && imc <= 16.99) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Abaixo do peso grave`)
+
+        } else if (imc >= 17 && imc <= 18.49) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Abaixo do peso`)
+
+        } else if (imc >= 18.50 && imc <= 24.99) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Peso normal`)
+
+        } else if (imc >= 25 && imc <= 29.99) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Sobre Peso`)
+
+        } else if (imc >= 30 && imc <= 34.99) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Obesidade grau 1`)
+
+        } else if (imc >= 35 && imc <= 39.99) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)} classificação: Obesidade grau 2`)
+            
+        } else if (imc >= 40) {
+            document.write(`${nome} seu imc é ${imc.toFixed(2)},classificação: Obesidade grau 3`)
+        }
+
+    </script>
+
+</body>
+</html>
