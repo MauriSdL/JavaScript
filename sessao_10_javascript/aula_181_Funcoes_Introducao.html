@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Os 2 tipos de funcoes
+        //funcoes do tipo void - Ela realiza algum tipo de processamento mas nao retornam nenhuma chamada
+        //funcoes do tipo retorno - Ela retorna algum tipo de retorno pra quem fez a chamada dela
+        
+        function calcularAreaTerreno (largura, comprimento) {
+            let area = largura * comprimento
+
+            // tipo void
+            // document.write(`O terreno possui ${area} metros quadrados.`)
+
+            // tipo retorno
+            return area
+        }
+
+        // tipo void
+        // calcularAreaTerreno(15, 25)
+
+        //tipo retorno
+
+        let largura = prompt('Digite a largura do terreno:')
+        let comprimento = prompt('Digite o comprimento do terreno:')
+
+        let area2 = calcularAreaTerreno(largura, comprimento)
+        document.write(`O terreno possui ${area2} metros quadrados.`)
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function soma(a, b) {
+            return a + b
+        }
+
+        // Com a quantidade de parametros pedido resultado 14 que seria a soma de 7 + 7
+        console.log(soma(7, 7))
+        
+        // Com mais parametros (seja dentro da funcao ou na chamada da funcao)
+        // A funcao descarta os parametro a mais para evitar de quebra o programa e faz o calculo normalmente
+        console.log(soma(7, 7, 9, 15))  // resultado 14, 9 e 15 nao serao considerados
+        
+        // Com parametros a menos, O parametro que faltar, Ser tornará ( Undefined ) e a soma retornará o resultado: ( not a number )
+        console.log(soma(7)) // resultado not a number
+
+        // Sem passar os parametro a e b, Ambos teria o valor ( Undefined ),E o resultado seria : not a number
+        console.log(soma())
+
+    </script>
+
+</body>
+</html>
