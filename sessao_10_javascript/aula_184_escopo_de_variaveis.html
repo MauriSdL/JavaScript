@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 3 escopos: global,funcao, bloco
+
+        // Escopo bloco
+        let serie = 'friends'
+        if (true) {
+            // OBS: No lugar de var usar let o valor da variavel nao será mostrado dentro do escopo de bloco
+            var serie2 = 'Game of Thrones'
+            document.write(serie)
+        }
+
+        // OBS: No lugar de var usar let o valor da variavel nao será mostrado dentro do escopo de bloco
+        var serie2 = 'Game of Thrones'
+        document.write(serie2)  
+        document.write('<br />')
+        
+
+        // Escopo global
+        function x () {
+            //OBS: Ja dentro da funcao se colocar var ou let em nenhuma das opcoes o valor da variavel aparecerá
+            var serie3 = 'The Walking Dead'
+            document.write(serie)
+            document.write(serie2)
+        }
+        x()
+        document.write('<br />')
+        document.write(serie3)
+
+        // OBS: variaveis de escopo de funcao e bloco visualizam variaveis de escopo global
+        // Variaveis dentro do escopo de bloco sofrem elevacao (elevacao quer dizer que a variavel será vista (roistin))
+    
+    </script>
+
+</body>
+</html>

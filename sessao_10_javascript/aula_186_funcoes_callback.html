@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        function exibirArtigo (callbackSucesso, callbackErro) {
+            if (true) {
+                callbackSucesso('Funcoes de callback em JS', 'Funcoes de callback são muito utilizadas...')
+            } else {
+                callbackErro('Erro ao recuperar os dados')
+            }
+        }
+
+        let callbackSucesso = function(titulo, descricao) {
+            document.write(`<h1> ${titulo} </h1>`)
+            document.write('<hr />')
+            document.write(`<p> ${descricao} </p>`)
+        }
+
+        let callbackErro = function(erro) {
+            document.write(`<p> ${erro} </p>`)
+        }
+
+        exibirArtigo(callbackSucesso, callbackErro)
+
+        // funciona tanto var quanto let
+        // Callback é a passagem de funcoes como parametros para outras funcoes
+        // OBS:Observe que as funcoes estao sendo chamadas sem os ().
+        // Se colocar os () o javascript entenderá que é pra executar a funcao para pegar o valor dela
+        // no momento que ela for passada como parametro.
+
+    </script>
+
+</body>
+</html>

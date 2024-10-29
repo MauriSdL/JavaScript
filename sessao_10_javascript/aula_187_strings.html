@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* Indice
+            J o r g e     S a n t      A  n  a
+            0 1 2 3 4  5  6 7 8 9  10  11 12 13
+        */
+
+        // Retorna a quantidade de caracteres de uma string - ( .length )
+        document.write('jorge Sant Ana'.length)
+        document.write('<br><br>')
+        
+        // Retorna o numero do indice da primeira letra string - ( .indexof(g))
+        // Se tiver mais de uma da mesma letra na string vai mostar o indice somente da primeira encontrada
+        // Retorna -1 como resposta caso a letra procurada dentro da string nao exista nela
+        document.write('jorge Sant Ana'.indexOf('t'))
+        document.write('<br><br>')
+
+        // Retorna a letra do indice da string - ( .charArt(indice) )
+        document.write('1 - jorge Sant Ana'.charAt(0))
+        document.write('<br><br>')
+
+        // Troca uma palavra por outra - ( replace('palavra a ser trocada', 'nova palavra') )
+        document.write('2 - jorge Sant Ana'.replace('Sant Ana', 'Silva'))
+        document.write('<br><br>')
+
+        // Mostra somente a uma quantidade X de caracteres dentro da string - (substr(posiçao inicial, Quantidade de caracteres a ser mostrado))
+        document.write('3 - Mostra os caracteres dentro do intervalo dos indices espeficicados na string'.substr(0, 70))
+        document.write('<br><br>')
+
+        // Converte tudo em Minusculo - ( toLowerCase() )
+        document.write('4 - jorge Sant Ana'.toLowerCase())
+        document.write('<br><br>')
+
+        // Converte tudo em Maiusculo - ( toUpperCase() )
+        document.write('5 - jorge Sant Ana'.toUpperCase())
+        document.write('<br><br>')
+
+        // Remove Espaço em branco do inicio meio e fim da frase ( .replace(/\s+/g, "") )
+        // \s+ é uma expressão regular que encontra um ou mais espaços em branco.
+        // O g no final da expressão regular faz com que ela busque todos os espaços na string.
+        document.write('     6 - Remove Espaço em branco do inicio meio e fim da frase'.replace(/\s+/g, ""))
+        document.write('<br><br>')
+
+        // Remove o Espaço em branco do inicio da frase ( .trimStart() )
+        document.write('     7 - Remove o Espaço em branco do inicio da frase'.trimStart())
+        document.write('<br><br>')
+
+        // Remove o Espaço em branco do final da frase ( .trimEnd() )
+        document.write('8 - Remove o Espaço em branco do final da frase    '.trimEnd())
+        document.write('<br><br>')
+
+        // Remove os Espaços em Branco do começo e fim da frase ( .trim() )
+        document.write('     9 - Remove os Espaços em Branco do começo e fim da frase     '.trim())
+        document.write('<br><br>')
+        
+        // Mostra os caracteres de um Indice ao Outro - ( .slice(indice começa, indice que termina))
+        document.write('XXXXX10 - Mostra os caracteres de um Indice ao Outro XXXXXXXXX'.slice(5, 51))
+        document.write('<br><br>')
+
+        // Add palavra a frase - (.concat('separador das palavras', 'Palavra a ser add' ))
+        document.write('11 - Add palavra a '.concat('_', 'frase' ))
+        document.write('<br><br>')
+        
+        // Preencha a frase até ela atinja o comprimento desejado ( .padStart(Q.caracteres, "separador ") )
+        // Para preencher com um número, primeiro converta-o em uma string.
+        document.write('12 - Preencha a frase até ela atinja o comprimento desejado'.padStart(65, "& "))
+        document.write('<br><br>')
+
+        // Repete a string pelo valor informado ( .repeat(numero de repeticoes) )
+        document.write('13 - Repete a string pelo valor informado'.repeat(3))
+        document.write('<br><br>')
+        
+        // Subtitui todas as ocorrencias da frase por outra palavra ( .replaceAll(/palavras a serem substituidas/g, 'nova Palavra') )
+        document.write('14 - Subtitui possiveis ocorrencias da frase por outra palavra'.replaceAll(/possiveis/g, 'todas'))
+        document.write('<br><br>')
+
+    </script>
+
+</body>
+</html>
