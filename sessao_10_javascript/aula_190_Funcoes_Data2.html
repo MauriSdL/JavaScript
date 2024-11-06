@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // toDateString(): É um Metodo do Objeto Date(), Que converte a data para string no formato abreviado,
+        // Mostra dessa forma: "Wed Nov 04 2024".
+        // Nescessario respeitar a seguencia --> new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+
+        let data = new Date()
+        let data1 = new Date(2017, 0, 15)
+        let data2 = new Date(2017, 1, 23)
+        let milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        let milisegundos_por_dia =  (1*24*60*60*1000)
+
+
+        // Data atual do sistema
+        document.write('1 - Data Atual do Sistema <br>')
+        // ----------------> {Pega o Dia} ------>{Pega o Mes} ------------>{  Pega  Ano  }
+        document.write(`${data.getDate()} / ${data.getMonth() + 1} / ${data.getFullYear()} <hr> <br>`)
+        // Os Meses vao de 0 a 11 por isso o ( data.getMonth() + 1 )
+
+
+        // Adciona e Remove Dias
+        document.write('2 - Adicionei um dia na data 4/11/2024 <br>')
+        data.setDate(data.getDate() + 1)
+        document.write(data.toDateString())
+
+
+        // Adiciona e Remove Mes
+        document.write('<hr> <br>')
+        document.write('3 - Adicionei um mes em 5/11/2024 <br>')
+        data.setMonth(data.getMonth() + 1)
+        document.write(data.toDateString()) 
+
+
+        // Adciona e Remove Ano
+        document.write('<hr> <br>')
+        document.write('4 - Adicionei um Ano em 5/12/2024 <br>')
+        data.setFullYear(data.getFullYear() + 1)
+        document.write(data.toDateString()) 
+        document.write('<hr><br>')
+
+
+        // Converter a Data para String, Para poder ser feito o calculo usando tempo
+        document.write('5 - Converte a Data para String <br>')
+        document.write(`${data1.toDateString()} <br>`)
+        document.write(`${data2.toDateString()} <hr> <br>`)
+
+
+        // Converter para Millesegundos
+        document.write('6 - Converte para Milisegundos <br>')
+        document.write(`${data1.getTime()} <br>`)
+        document.write(`${data2.getTime()} <hr> <br>`)
+        // O método .getTime() Retorna o valor numérico da data, No formato de milissegundos desde 1 de janeiro de 1970
+        // Esse valor é muito útil para realizar cálculos entre data, e hora, (conhecido como "Unix Epoch").
+        // Ordenar Datas: Em um array de datas, .getTime() pode ser usado para comparar e ordenar datas cronologicamente.
+
+
+        // Mostra a quantidade em milisegundos entre data1 e data2
+        // Math.abs É usado para encontrar o valor absoluto de um numero(valor absoluto: É o próprio numero porém positivo)
+        document.write('7 - Mostra a quantidade em milisegundos entre data1 e data2 <br>')
+        document.write(`${Math.abs(data1.getTime() - data2.getTime())} <hr> <br>`)
+
+
+        // Quantos milisegundos tem 1 Dia, --> Cada segundo tem 1000 milisegundos
+        document.write('Quantidade de Milisegundos tem 1 Dia <br>')
+        document.write((24*60*60*1000) + '<hr> <br>')
+        
+        
+        // Converte os milisegundos em dias, --> Math.ceil Arredonda para cima
+        document.write('Converte os milisegundos em dias:<br>')
+        document.write(`Entre data1 e data2 tem ${Math.ceil(milisegundos_entre_datas / milisegundos_por_dia)} dia`)
+    </script>
+</body>
+</html>

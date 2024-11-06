@@ -6,19 +6,89 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <br>
+    <p id="demo">mm</p>
+    <br><br>
+
     <script>
 
+        // metodos do tipo get sao usados para capturar os dados
+        // metodos do tipo set sao usados para configurar os dados e tambem usados para efetuar calculos
+
+
+        // Metodos get
+
+        // Cria a data com Dia da Semana, Mes, Dia, Ano e Horario(Brasilia) Nessa ordem.
         let data = new Date()
 
-        // Mostra o Dia do mes do 1 ao 31
-        document.write(data.getDate(), '<br>')
+        // Mostra apenas o Dia
+        document.write("Dia: ", data.getDate(), '<br><br>')
 
-        // Mostra o Mes de 0 a 11 OBS: para mostrar o mes certinho deve soma + 1
-        document.write(data.getMonth() + 1, '<br>')
+        // Mostra apenas Mes 0(janeiro) até 11(Dezembro)
+        document.write("Mes: ", data.getMonth() + 1, '<br><br>')  // OBS: para mostrar o mes certinho deve soma + 1
 
-        // Mostra o ano
-        document.write(data.getFullYear(), '<br>')
+        // Mostra apenas o Ano
+        document.write("Ano: ", data.getFullYear(), '<br><br><br><br>')
+
+
+
+        // Metodos set
+        
+        // Modifica apenas o Dia
+        const d = data
+        d.setDate(3)
+        document.write(d)
+        
+
+        // Modifica apenas o Mes
+        d.setMonth(1)
+        
+        
+        // Modifica apenas o Ano
+        d.setFullYear(2030)
+
+        // Mostra as Modificaçoes na data
+        document.getElementById("demo").innerHTML = d
+
+
+        // Mostrar o Horario
+
+        t_segundos = data.getSeconds()
+        t_minutos = data.getMinutes()
+        t_hora = data.getHours()
+
+        M_segundos = data.setSeconds()
+        M_minutos = data.setMinutes()
+        M_hora = data.setHours()
+
+        // Mostra apenas os segundos
+        console.log("Segundos:", data.getSeconds())
+        document.write("Segundos: ", t_segundos, '<br><br>')
+
+        // Modificar os segundos
+        data.setSeconds(12)
+        console.log("Segundos Modificado:", data.getSeconds())
+
+        // Mostra apenas os Minutos
+        console.log("Minutos:", data.getMinutes())
+        document.write("Minutos: ", t_minutos, '<br><br>')
+
+        // Modifica os Minutos
+        data.setMinutes(7)
+        console.log("Minutos Modificado:", data.getMinutes())
+
+        // Mostra apenas a Hora
+        console.log("Hora:", data.getHours())
+        document.write("Hora: ", t_hora, '<br><br>')
+
+
+        // Modifica a Hora
+        data.setHours(16)
+        console.log("Hora Modificada:", data.getHours())
+
+        // Mostra a Hora Completa
+        console.log("Hora Completa:", data.toTimeString())
+        document.write("Hora Completa sem a data:", data.toLocaleTimeString())
 
     </script>
 
