@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Manipulando estilos</h1>
+
+    <button style="background-color: red;" type="button" onclick="Adicionar_Cor_na_Div('#ff0000', '300px', '300px')">Vermelho</button>
+    <button style="background-color:  green;" type="button" onclick="Adicionar_Cor_na_Div('#00ff00', '300px', '150px')">Verde</button>
+    <button style="background-color: blue; color: white;" type="button" onclick="Adicionar_Cor_na_Div('#0000ff', '150px', '300px')">Azul</button>
+
+    <hr>
+
+    <div style="border: solid 1px #000; width: 300px; height: 300px;" id="quadrado"></div>
+
+
+    <script>
+
+        function Adicionar_Cor_na_Div(corDeFundo, largura, altura) {
+            document.getElementById('quadrado').style.backgroundColor = corDeFundo;
+            document.getElementById('quadrado').style.width = largura;
+            document.getElementById('quadrado').style.height = altura;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>onkeydown -- A logica acontece antes da realizaçao do evento</p>
+    <input onkeydown="Apertar_Tecla()" type="text">
+
+
+    <p>onkeyup -- A logica acontece após a realizaçao do evento</p>
+    <input onkeyup="Soltar_Tecla()" type="text">
+
+
+    <p>onkeyup -- A logica acontece antes da realizaçao do evento</p>
+    <input onkeypress="Manter_Tecla_Precionada()" type="text">
+    <script>
+
+
+        function Apertar_Tecla() {
+            alert('onkeydown -- evento disparado ao Apertar a tecla, Mostra a tecla apertada depois do evento ser realizado')
+        }
+
+        function Soltar_Tecla() {
+            alert('onkeyup -- evento disparado ao Soltar a tecla, A tecla precionada é mostrada antes do evento acontecer')
+        }
+
+        function Manter_Tecla_Precionada() {
+            alert('onkeypress -- evento disparado ao Apertar a tecla, Mostra a tecla apertada depois do evento ser realizado')
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes click do Mouse</title>
+
+    <style>
+        body{
+            background-color: rgb(48, 46, 46);
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 230px;
+            width: 550px;
+            margin-top: 7px;
+            margin-bottom: 10px;
+            margin-left: 25px;
+        }
+
+        .div1, .div2 {
+            display: inline-block;
+            vertical-align: top;
+            width: 48%;
+        }
+    
+        </style>
+
+</head>
+<body>
+    
+    <div class="div1">
+
+        <div onclick= "alert('Clicou no Vermelho')" style="background: red;"> onckick, <br> Ativado com 1 click</div>
+
+        <div onclick="um_click_do_Mouse()"  style="background-color: aqua;"> onClick <br> Ativado com 1 click <br> Chamando a função</div>
+
+        <div ondblclick="duplo_Click()"  style="background-color: yellow;"> ondblClick <br> Ativado com duplo click <br> Muda a cor do Body</div>
+    
+    </div>
+    
+
+
+    <div class="div2">
+        
+        <div onmouseup="click_mouse_liberado()"  style="background-color:#eead2d;"> onmouseup <br> Quando o click do mouse é liberado</div>
+
+        <div onmouseover="em_cima_do_elemento()"  style="background-color:#008b8b;"> onmouseover <br> Quando o mouse está em cima do Elemento</div>
+
+        <div onmouseout="sai_de_cima_do_elemento()"  style="background-color:#e0b0ff;"> onmouseout <br> Quando o mouse sai de cima do Elemento</div>
+    
+    </div>
+    
+
+
+    <script>
+
+        function um_click_do_Mouse() {
+            alert("Clicou no Azul" + "\n" + "Chamando a Função")
+        }
+
+        function duplo_Click() {
+            document.body.style.backgroundColor = '#F36969FF'
+        }
+
+        function click_mouse_liberado() {
+            document.body.style.backgroundColor = "#bdb76b";
+        }
+
+        function em_cima_do_elemento() {
+            document.body.style.backgroundColor = "#831d1c";
+        }
+
+        function sai_de_cima_do_elemento() {
+            document.body.style.backgroundColor = "#fde910";
+        }
+
+    </script>
+
+</body>
+</html>
